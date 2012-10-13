@@ -22,8 +22,8 @@ win.add(postButton);
 Ti.include("lib/twitter_api.js");
 //initialization
 var twitterApi = new TwitterApi({
-    consumerKey:'2Z3ZD3PKTMluWjMdxT0pQ',
-    consumerSecret:'U4dTez6yCmu4IIN07a1yEGMy2vlhjhQBmY5dqZpysAw'
+    consumerKey:'VVXyB058XzC0XTpYnOcAw',
+    consumerSecret:'ydB6sZRKgFYMoQ2fej2aTggC5qlksIS3W2LJPNqa84'
 });
 twitterApi.init(); 
 
@@ -57,7 +57,7 @@ function tweet(message) {
             }));
 
             row.add(Titanium.UI.createImageView({
-                url: responce.user.profile_image_url,
+                image: responce.user.profile_image_url,
                 top: 8,
                 left: 8,
                 width: 48,
