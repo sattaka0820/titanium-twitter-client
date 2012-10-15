@@ -22,7 +22,7 @@ var tableView = Titanium.UI.createTableView({
 });
 
 var http = Titanium.Network.createHTTPClient();
-http.open("GET", "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=sat_taka_dev");
+http.open("GET", "http://api.twitter.com/1/statuses/user_timeline.json?screen_name=shinderumanbot3");
 http.onload = function() {
     var json = JSON.parse(http.responseText);
     tableView.data = json.map(function(tweet) {
@@ -56,7 +56,7 @@ http.onload = function() {
         }));
 
         row.add(Titanium.UI.createImageView({
-            url: tweet.user.profile_image_url,
+            image: tweet.user.profile_image_url,
             top: 8,
             left: 8,
             width: 48,
